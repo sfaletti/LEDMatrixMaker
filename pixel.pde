@@ -1,5 +1,5 @@
 class Pixel{
-	float pixSize, xPos, yPos;
+	float pixSize, xPos, yPos; //pixel size is width and height, as each pixel is round
 	color pixColor;
 
 	Pixel(){
@@ -24,7 +24,6 @@ class Pixel{
 
 	void display(){
 		pushStyle();
-		ellipseMode(CENTER);
 		noStroke();
 		fill(pixColor);
 		ellipse(xPos, yPos, pixSize, pixSize);
