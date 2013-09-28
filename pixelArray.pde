@@ -12,6 +12,11 @@ class PixelArray{
 		dispWidth = _dispWidth;
 		dispHeight = _dispHeight;
 		pixSize = 30; //default value
+		for (int i = 0; i<xCount; i++){
+			for (int j = 0; j<yCount; j++){
+				pixelArray[i][j] = new Pixel();
+			}
+		}
 		setPixLocs();
 		setPixSizes(pixSize);
 	}
