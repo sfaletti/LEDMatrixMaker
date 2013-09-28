@@ -26,6 +26,7 @@ class Pixel{
 		pushStyle();
 		noStroke();
 		fill(pixColor);
+		ellipseMode(CENTER);
 		ellipse(xPos, yPos, pixSize, pixSize);
 		popStyle();
 	}
