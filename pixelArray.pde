@@ -12,7 +12,6 @@ class PixelArray{
 		dispWidth = _dispWidth;
 		dispHeight = _dispHeight;
 		pixSize = 30; //default value
-		pixelArray = new Pixel[xCount][yCount];
 		setPixLocs();
 		setPixSizes(pixSize);
 	}
@@ -44,7 +43,7 @@ class PixelArray{
 				pixelArray[i][j].clearInputColors();
 			}
 		}
-		_img.resize(dispWidth, dispHeight);
+		_img.resize(int(dispWidth), int(dispHeight));
 		for (int i = 0; i<_img.height; i++){
 			for (int j = 0; j<_img.width; j++){
 				for (int k = 0; k<yCount; k++){
