@@ -2,14 +2,14 @@ class Pixel{
 	float pixSize; //pixel size is width and height, as each pixel is round
 	float xPos, yPos; //pixel locations from CENTER
 	color pixColor;
-	ArrayList<color> inputColors;
+	IntList inputColors;
 
 	Pixel(){
 		pixSize = 10; //default value
 		xPos = 0;
 		yPos = 0;
 		pixColor = color(255, 255, 255);
-		inputColors =  = new ArrayList<color>();
+		inputColors = new IntList();
 		inputColors.clear();
 	}
 
@@ -23,8 +23,8 @@ class Pixel{
 		yPos = _yPos;
 	}
 
-	void addInputColor(color _color){
-		inputColors.add(_color);
+	void addInputColor(int _color){
+		inputColors.append(_color);
 	}
 
 	void setColor(){
@@ -55,7 +55,7 @@ class Pixel{
 		popStyle();
 	}
 
-	boolean isWithin(float _xLoc, float _yloc){
+	boolean isWithin(float _xLoc, float _yLoc){
 		if (dist(_xLoc, _yLoc, xPos, yPos) < pixSize/2){
 			return true;
 		}
