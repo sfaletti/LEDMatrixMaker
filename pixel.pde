@@ -23,7 +23,7 @@ class Pixel{
 		yPos = _yPos;
 	}
 
-	void addInputColor(int _color){
+	void addInputColor(color _color){
 		inputColors.append(_color);
 	}
 
@@ -55,8 +55,8 @@ class Pixel{
 		popStyle();
 	}
 
-	boolean isWithin(float _xLoc, float _yLoc){
-		if (dist(_xLoc, _yLoc, xPos, yPos) < pixSize/2){
+	boolean isWithin(float _adjVal, float _xLoc, float _yLoc){ //adjustment value should be between 0-1
+		if (dist(_xLoc, _yLoc, xPos, yPos) < pixSize/2*_adjVal){
 			return true;
 		}
 		else {

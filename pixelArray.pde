@@ -5,6 +5,7 @@ class PixelArray{
 	float dispWidth, dispHeight, pixSize; //set display and pixel sizes
 
 	PixelArray(int _xCount, int _yCount, float _dispWidth, float _dispHeight){
+		pixelArray = new Pixel[_xCount][_yCount];
 		xLoc = 0;
 		yLoc = 0;
 		xCount = _xCount;
@@ -42,7 +43,7 @@ class PixelArray{
 		}
 	}
 
-	void setPixColors(PImage _img){
+	void setPixColors(PImage _img, float _pixBlendAmt){
 		for (int i = 0; i<xCount; i++){
 			for (int j = 0; j<yCount; j++){
 				pixelArray[i][j].clearInputColors();
@@ -53,8 +54,8 @@ class PixelArray{
 			for (int j = 0; j<_img.width; j++){
 				for (int k = 0; k<yCount; k++){
 					for (int l = 0; l<xCount; l++){
-						if (pixelArray[l][k].isWithin(j,i)){
-							pixelArray.addInputColor(_img.get(j,i));
+						if (pixelArray[l][k].isWithin(_pixBlendAmt,j,i)){
+							pixelArray[l][k].addInputColor(_img.get(j,i));
 						}
 					}
 				}
