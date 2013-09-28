@@ -3,7 +3,7 @@ class Pixel{
 	color pixColor;
 
 	Pixel(){
-		pixSize = 30;
+		pixSize = 10; //default value
 		xPos = 0;
 		yPos = 0;
 		pixColor = color(255, 255, 255);
