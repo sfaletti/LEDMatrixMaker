@@ -30,6 +30,3 @@ $RECYCLE.BIN/
 *.war
 *.ear
 
-# SublimeText project files
-*.sublime-workspace
-
