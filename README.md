@@ -1,0 +1,1 @@
+This project is intended to be a prototyping tool for designrs of physical products, or just LED Matrix Displays. It takes a seed image and generates a 2d array of circles from the colors sampled below it.
